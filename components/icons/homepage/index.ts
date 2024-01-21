@@ -1,0 +1,13 @@
+export { default as WebIcon } from './WebIcon';
+export { default as VisionIcon } from './VisionIcon';
+export { default as MaintenanceIcon } from './MaintenanceIcon';
+export { default as FasterIcon } from './FasterIcon';
+export { default as FullIcon } from './FullIcon';
+export { default as ModernIcon } from './ModernIcon';
+export { default as StepOneIcon } from './StepOneIcon';
+export { default as StepTwoIcon } from './StepTwoIcon';
+export { default as StepThreeIcon } from './StepThreeIcon';
+export { default as StepFourIcon } from './StepFourIcon';
+export { default as StepFiveIcon } from './StepFiveIcon';
+export { default as StepSixIcon } from './StepSixIcon';
+export { default as NestedCircleIcon } from './NestedCircleIcon';

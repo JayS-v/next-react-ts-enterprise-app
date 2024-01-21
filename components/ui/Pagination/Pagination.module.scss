@@ -1,0 +1,39 @@
+@import 'styles/variables.module';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  margin: 0 6px;
+  background-color: $color-bg-highlighted;
+  font-weight: 700;
+  border: 1px solid $color-grey;
+  border-radius: $border-radius-sm;
+  transition: $transition-base;
+
+  @media (min-width: $width-md) {
+    &:hover {
+      box-shadow: $box-shadow-sm;
+    }
+  }
+
+  &._active {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: #fff;
+
+    @media (min-width: $width-md) {
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+    padding: 8px 16px 10px;
+  }
+}

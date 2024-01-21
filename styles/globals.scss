@@ -1,0 +1,44 @@
+@import 'reset';
+@import 'variables.module';
+
+html {
+  scroll-behavior: smooth;
+  font-size: 1rem;
+  ::selection {
+    color: #ffffff;
+    background: $color-primary;
+  }
+}
+
+html,
+body {
+  min-width: 340px;
+  height: 100%;
+  color: $color-font;
+  // font-family: 'Gothic A1', sans-serif;
+  font-weight: 500;
+}
+
+p {
+  line-height: 160%;
+}
+
+#__next {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+header {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+}

@@ -1,0 +1,77 @@
+@import 'styles/variables.module';
+
+.section {
+  padding: 40px 0;
+
+  @media (max-width: $width-xs) {
+    padding-top: 20px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  margin: 0 -14px;
+  align-items: center;
+
+  @media screen and (max-width: $width-md) {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+.col {
+  padding: 0 14px;
+  width: 50%;
+
+  @media screen and (max-width: $width-md) {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-height: 510px;
+  min-height: 420px;
+  border-radius: $border-radius-md;
+  object-fit: cover;
+
+  @media screen and (max-width: $width-md) {
+    margin-bottom: 20px;
+  }
+}
+
+.badge {
+  margin-bottom: 20px;
+  padding: 5px 12px 3px;
+  display: inline-block;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  border-radius: $border-radius-sm;
+  color: #fff;
+  background-color: $color-primary;
+}
+
+.title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: $color-dark;
+
+  @media (max-width: $width-xs) {
+    font-size: 1.6rem;
+  }
+}
+
+.paragraph {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

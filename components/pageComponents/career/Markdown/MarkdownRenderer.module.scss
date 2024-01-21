@@ -1,0 +1,46 @@
+@import 'styles/variables.module';
+
+.markdown_wrapper {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul,
+  li {
+    font-size: revert;
+    font-weight: revert;
+    margin: revert;
+    line-height: revert;
+  }
+
+  h2 {
+    margin-top: 1.5em;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  strong {
+    color: $color-highlight;
+  }
+
+  ul {
+    margin-left: 20px;
+
+    @media screen and (min-width: $width-xs) {
+      margin-left: 0;
+    }
+  }
+
+  li {
+    list-style-type: disc;
+    margin-bottom: 0.5em;
+  }
+
+  li::marker {
+    font-size: large;
+    color: $color-highlight;
+  }
+}

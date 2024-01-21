@@ -1,0 +1,29 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /portfolio/automated-testing-of-a-neobank
+Disallow: /portfolio/web-based-trading-platform
+Disallow: /portfolio/digital-employee-chat-video-bot
+Disallow: /portfolio/marketing-automation-for-small-businesses
+Disallow: /portfolio/blockchain-based-legal-governance-system
+Disallow: /portfolio/admin-panel-for-a-trading-education-business
+Disallow: /portfolio/cyber-security-software
+Disallow: /portfolio/madvalorem
+Disallow: /portfolio/guide-zang
+Disallow: /portfolio/prospecting
+Disallow: /de/portfolio/automated-testing-of-a-neobank
+Disallow: /de/portfolio/web-based-trading-platform
+Disallow: /de/portfolio/digital-employee-chat-video-bot
+Disallow: /de/portfolio/marketing-automation-for-small-businesses
+Disallow: /de/portfolio/blockchain-based-legal-governance-system
+Disallow: /de/portfolio/admin-panel-for-a-trading-education-business
+Disallow: /de/portfolio/cyber-security-software
+Disallow: /de/portfolio/madvalorem
+Disallow: /de/portfolio/guide-zang
+Disallow: /de/portfolio/prospecting
+
+# Host
+Host: https://www.monitaet.com
+
+# Sitemaps
+Sitemap: https://www.monitaet.com/sitemap.xml

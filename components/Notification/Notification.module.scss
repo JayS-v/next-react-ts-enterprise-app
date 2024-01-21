@@ -1,0 +1,32 @@
+@import 'styles/variables.module';
+
+.section {
+  position: relative;
+  z-index: 98;
+  padding: 12px 0;
+  background: #fff linear-gradient($color-primary-light, $color-bg-highlighted);
+
+  @media (max-width: $width-mobile-menu) {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.link {
+  display: block;
+  color: $color-primary;
+  font-size: 0.9rem;
+  transition: $transition-base;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-bottom: 1px solid $color-primary;
+  }
+}

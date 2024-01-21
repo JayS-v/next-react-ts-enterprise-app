@@ -1,0 +1,107 @@
+@import 'styles/variables.module';
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  margin: 0;
+}
+
+.section {
+  position: relative;
+  height: 400px;
+  background: url('/images/career/colleagues-talking-outside-laughing-light.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @media screen and (min-width: $width-sm) {
+    height: 300px;
+    background-position: 0 50%;
+    background-size: cover;
+  }
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 4px;
+
+  @media screen and (max-width: $width-xs) {
+    padding: 0 14px;
+  }
+
+  @media screen and (min-width: $width-sm) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.image_container {
+  position: relative;
+  min-width: max-content;
+}
+
+.image_container::before {
+  content: url(../../../../components/icons/career/quote-white.svg);
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  z-index: 2;
+}
+
+.image {
+  z-index: 1;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+}
+
+.content {
+  font-size: 22px;
+  color: #ffffff;
+  z-index: 1;
+
+  @media screen and (min-width: $width-sm) {
+    font-size: 26px;
+    width: 70%;
+    text-align: start;
+  }
+}
+
+.author {
+  color: $color-highlight;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+
+  @media screen and (min-width: $width-sm) {
+    font-size: 22px;
+    width: 70%;
+    text-align: start;
+    margin-right: auto;
+  }
+}

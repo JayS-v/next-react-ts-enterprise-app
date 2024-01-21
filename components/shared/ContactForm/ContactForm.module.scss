@@ -1,0 +1,144 @@
+@import 'styles/variables.module';
+
+.section {
+  padding: 40px 0;
+  animation: fadeIn 1.3s;
+
+  @media screen and (max-width: $width-md) {
+    padding-bottom: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.divider {
+  display: none;
+
+  @media screen and (max-width: $width-md) {
+    display: block;
+    margin-top: 50px;
+  }
+}
+
+.title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: $color-dark;
+  text-align: center;
+
+  @media screen and (max-width: $width-xs) {
+    font-size: 1.6rem;
+  }
+}
+
+.paragraph {
+  color: $color-dark;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  user-select: none;
+
+  @media screen and (max-width: $width-xs) {
+    font-size: 1.1rem;
+  }
+}
+
+.linkWrapper {
+  margin: 0 5px;
+  cursor: pointer;
+  color: $color-primary;
+  font-weight: 600;
+  transition: $transition-base;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-bottom: 1px solid $color-primary;
+  }
+}
+
+.icon {
+  margin-right: 8px;
+  color: $color-primary;
+  margin-bottom: 3px;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+
+  @media (max-width: $width-md) {
+    max-width: 600px;
+  }
+
+  form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+
+    button {
+      margin: 30px auto 0;
+      min-width: 260px;
+      min-height: 50px;
+      padding: 0 10px;
+      background-color: $color-primary;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 1px;
+      border-radius: $border-radius-sm;
+      transition: $transition-base;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (min-width: $width-md) {
+        &:hover {
+          box-shadow: $box-shadow-button;
+        }
+      }
+
+      &._disabled {
+        pointer-events: none;
+        opacity: 0.4;
+      }
+    }
+  }
+
+  .formDisabled {
+    margin-top: 0;
+    pointer-events: none;
+    opacity: 0.2;
+    user-select: none;
+  }
+}
+
+.row {
+  margin: 0 -10px;
+  display: flex;
+  justify-content: space-between;
+
+  & > div {
+    width: 50%;
+    padding: 0 10px;
+  }
+
+  @media (max-width: $width-xs) {
+    margin: 0;
+    flex-direction: column;
+
+    & > div {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

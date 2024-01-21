@@ -1,0 +1,23 @@
+@import 'styles/variables.module';
+
+.section {
+  padding: 60px 0 40px;
+
+  @media (max-width: $width-xs) {
+    padding: 40px 0;
+  }
+}
+
+.carouselMobile {
+  display: none;
+
+  @media (max-width: $width-lg) {
+    display: block;
+  }
+}
+
+.carouselDesktop {
+  @media (max-width: $width-lg) {
+    display: none;
+  }
+}

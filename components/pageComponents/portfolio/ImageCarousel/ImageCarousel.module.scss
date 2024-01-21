@@ -1,0 +1,26 @@
+@import 'styles/variables.module';
+
+.wrapper {
+  padding: 10px 0 0;
+
+  @media (max-width: $width-md) {
+    padding: 30px 0 10px;
+  }
+
+  @media (max-width: $width-xs) {
+    padding: 60px 0 40px;
+  }
+}
+
+.carousel {
+  height: 620px;
+  user-select: none;
+
+  @media (max-width: $width-md) {
+    height: 480px;
+  }
+
+  @media (max-width: $width-sm) {
+    height: 380px;
+  }
+}

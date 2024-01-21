@@ -1,0 +1,43 @@
+stages:
+  - build
+  - deploy
+
+image: docker:20.10.17
+
+before_script:
+  - docker login -u "$DEPLOY_TOKEN_USER" -p "$DEPLOY_TOKEN" $CI_REGISTRY
+
+services:
+  - docker:20.10.17-dind
+
+
+build-master:
+  stage: build
+
+  script:
+    - docker build --build-arg COMMIT_HASH=$CI_COMMIT_SHORT_SHA -t $CI_REGISTRY_IMAGE:latest .
+    - docker push $CI_REGISTRY_IMAGE:latest
+  only:
+    - master
+
+build-feature:
+  stage: build
+  when: manual
+  script:
+    - docker build --build-arg COMMIT_HASH=$CI_COMMIT_SHORT_SHA -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+  except:
+    - master
+
+deploy:
+  stage: deploy
+  when: manual
+  only:
+    - master
+  needs:
+    - build-master
+  script:
+    - chmod og= $ID_RSA
+    - apk update && apk add openssh-client
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker login -u "$DEPLOY_TOKEN_USER" -p "$DEPLOY_TOKEN" $CI_REGISTRY"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "bash deploy.sh"

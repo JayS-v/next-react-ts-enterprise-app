@@ -1,0 +1,58 @@
+@import 'styles/variables.module';
+
+.wrapper {
+  position: relative;
+  height: 500px;
+  padding: 200px 20px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $color-light;
+
+  @media (max-width: $width-md) {
+    padding-top: 160px;
+  }
+  @media (max-width: $width-xs) {
+    padding-top: 100px;
+  }
+}
+
+.motion {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -80px;
+  z-index: -99;
+}
+
+.image {
+  width: 100%;
+  min-height: 900px;
+  object-fit: cover;
+  z-index: -10;
+
+  @media (max-width: $width-lg) {
+    min-height: 600px;
+  }
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 3px #000;
+
+  @media (max-width: $width-xs) {
+    max-width: 240px;
+    font-size: 48px;
+  }
+}
+
+.text {
+  font-size: 28px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-shadow: 1px 1px 3px #000;
+}

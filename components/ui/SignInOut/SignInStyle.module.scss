@@ -1,0 +1,21 @@
+@import '../../../styles/variables.module';
+
+.sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  transition: $transition-base;
+  fill: $color-font;
+  cursor: pointer;
+
+  &:hover {
+    background: #edeeee;
+    fill: $color-primary;
+  }
+}

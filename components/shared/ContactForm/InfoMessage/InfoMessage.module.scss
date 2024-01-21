@@ -1,0 +1,44 @@
+@import 'styles/variables.module';
+
+.info {
+  margin-top: 40px;
+  padding: 20px 10px;
+  width: 100%;
+  border: 1px solid;
+  border-radius: $border-radius-md;
+  box-shadow: $box-shadow-sm;
+  text-align: center;
+  font-size: 1.2rem;
+
+  p {
+    margin-bottom: 10px;
+    font-weight: 1.1rem;
+    color: $color-dark;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: $color-primary;
+  }
+}
+
+.infoSuccess {
+  @extend .info;
+  border-color: $color-success;
+  box-shadow: 0 0 0 3px rgb($color-success, 25%);
+}
+
+.infoFailure {
+  @extend .info;
+  border-color: $color-danger;
+  box-shadow: 0 0 0 3px rgb($color-danger, 25%);
+}
+
+.icon {
+  margin-top: -20px;
+  color: $color-success;
+  font-size: 60px;
+}

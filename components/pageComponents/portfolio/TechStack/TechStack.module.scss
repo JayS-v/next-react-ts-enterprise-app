@@ -1,0 +1,47 @@
+@import 'styles/variables.module';
+
+.section {
+  padding: 60px 0 40px;
+}
+
+.title {
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: $color-dark;
+  margin-bottom: 60px;
+
+  @media (max-width: $width-xs) {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+}
+
+.wrapper {
+  margin-bottom: 20px;
+
+  th {
+    vertical-align: top;
+    text-align: inherit;
+    color: $color-dark;
+    font-weight: 700;
+    padding: 0 60px 12px 0;
+    min-width: 300px;
+
+    @media (max-width: $width-md) {
+      min-width: 200px;
+    }
+
+    @media (max-width: $width-sm) {
+      min-width: auto;
+    }
+
+    @media (max-width: $width-xs) {
+      padding-right: 30px;
+    }
+  }
+
+  td {
+    vertical-align: top;
+    padding: 0 0 12px;
+  }
+}

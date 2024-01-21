@@ -1,0 +1,38 @@
+@import 'styles/variables.module';
+
+.wrapper {
+  position: relative;
+  height: 600px;
+
+  @media (max-width: $width-md) {
+    height: 500px;
+  }
+
+  @media (max-width: $width-xs) {
+    height: 310px;
+  }
+}
+
+.motion {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -80px;
+  z-index: -99;
+}
+
+.image {
+  width: 100%;
+  min-height: 700px;
+  object-position: center top;
+  object-fit: cover;
+  z-index: -10;
+
+  @media (max-width: $width-md) {
+    min-height: 600px;
+  }
+
+  @media (max-width: $width-xs) {
+    min-height: 400px;
+  }
+}

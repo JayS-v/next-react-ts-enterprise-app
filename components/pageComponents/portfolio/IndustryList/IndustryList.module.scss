@@ -1,0 +1,35 @@
+@import 'styles/variables.module';
+
+.wrapper {
+  padding: 40px 0 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-align: center;
+
+  @media (max-width: $width-md) {
+    margin: 0 -16px;
+  }
+
+  @media (max-width: $width-xs) {
+    display: none;
+  }
+}
+
+.title {
+  margin-bottom: 30px;
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: $color-dark;
+  text-align: center;
+
+  @media (max-width: $width-xs) {
+    display: none;
+  }
+}
+
+.item {
+  margin: 0 16px 4px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: inline-block;
+}

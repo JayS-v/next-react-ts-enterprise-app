@@ -1,0 +1,66 @@
+@import 'styles/variables.module';
+
+.section {
+  padding: 60px 0 40px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: 50px;
+  color: $color-dark;
+  text-align: center;
+  font-size: 54px;
+  font-weight: 700;
+
+  @media (max-width: $width-md) {
+    margin-bottom: 30px;
+    font-size: 48px;
+  }
+
+  @media (max-width: $width-xs) {
+    margin-bottom: 30px;
+    font-size: 42px;
+  }
+}
+
+.text {
+  margin: 0 auto 50px;
+  max-width: 476px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+
+  @media (max-width: $width-md) {
+    font-size: 1.1rem;
+  }
+}
+
+.button {
+  min-width: 240px;
+  margin: 0 auto;
+  background-color: $color-primary;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: $border-radius-sm;
+  transition: $transition-base;
+
+  @media (min-width: $width-md) {
+    &:hover {
+      box-shadow: $box-shadow-button;
+    }
+  }
+
+  a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    white-space: nowrap;
+  }
+}

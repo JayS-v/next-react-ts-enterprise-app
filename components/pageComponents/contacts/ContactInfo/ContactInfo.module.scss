@@ -1,0 +1,101 @@
+@import 'styles/variables.module';
+
+.section {
+  padding: 80px 0 40px;
+  color: $color-dark;
+
+  @media screen and (max-width: $width-md) {
+    padding-top: 40px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  margin: 0 -14px;
+
+  @media screen and (max-width: $width-md) {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: $color-primary;
+    border-bottom: 1px solid transparent;
+    transition: $transition-base;
+
+    &:hover {
+      color: $color-dark;
+      border-bottom-color: $color-dark;
+    }
+  }
+}
+
+.col {
+  padding: 0 14px;
+  width: 50%;
+
+  @media screen and (max-width: $width-md) {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (max-width: $width-xs) {
+    display: block;
+  }
+}
+
+.image {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+
+  @media screen and (max-width: $width-md) {
+    display: none;
+  }
+}
+
+.title {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: $color-dark;
+  text-align: center;
+
+  @media screen and (max-width: $width-xs) {
+    font-size: 1.6rem;
+  }
+}
+
+.subtitle {
+  margin-right: 6px;
+  font-weight: 700;
+}
+
+.name {
+  padding-top: 9px;
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  @media screen and (max-width: $width-md) {
+    padding-top: 0;
+  }
+}
+
+.taxNotice {
+  max-width: 560px;
+
+  @media screen and (max-width: $width-md) {
+    text-align: center;
+  }
+
+  @media screen and (max-width: $width-xs) {
+    text-align: start;
+  }
+}

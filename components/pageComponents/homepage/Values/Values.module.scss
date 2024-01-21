@@ -1,0 +1,113 @@
+@import 'styles/variables.module';
+
+.section {
+  padding: 60px 0;
+
+  @media (max-width: $width-xs) {
+    padding: 40px 0;
+  }
+}
+
+.title {
+  margin-left: 10px;
+  font-size: 2.25rem;
+  color: $color-dark;
+  margin-bottom: 40px;
+
+  @media (max-width: $width-md) {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  @media (max-width: $width-xs) {
+    font-size: 1.7rem;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $width-xs) {
+    flex-direction: column;
+  }
+}
+
+.imgWrapper {
+  flex: 1;
+
+  @media (max-width: $width-xs) {
+    margin-bottom: 40px;
+    min-width: 80%;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  flex: 1;
+  padding-left: 160px;
+
+  @media (max-width: $width-md) {
+    padding-left: 100px;
+  }
+
+  @media (max-width: $width-sm) {
+    padding-left: 60px;
+  }
+
+  @media (max-width: $width-xs) {
+    padding-left: 0;
+  }
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (max-width: $width-lg) {
+    flex-direction: column;
+  }
+}
+
+.listItem {
+  margin-bottom: 40px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  @media (max-width: $width-lg) {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  @media (max-width: $width-sm) {
+    margin-bottom: 10px;
+  }
+}
+
+.icon {
+  font-size: 40px;
+  color: $color-primary;
+}
+
+.text {
+  padding-right: 10px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: $color-dark;
+
+  @media (max-width: $width-sm) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: $width-xs) {
+    padding-right: 20px;
+  }
+}

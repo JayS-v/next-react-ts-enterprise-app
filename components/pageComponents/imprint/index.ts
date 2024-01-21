@@ -1,0 +1,1 @@
+export { ImprintContent } from './ImprintContent';

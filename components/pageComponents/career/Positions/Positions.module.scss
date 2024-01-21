@@ -1,0 +1,71 @@
+@import 'styles/variables.module';
+
+.section {
+  margin-bottom: 72px;
+}
+
+.h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 64px;
+}
+
+.filters_container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto 18px;
+}
+
+.table {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.row_head {
+  font-size: 24px;
+  text-transform: uppercase;
+  height: 50px;
+}
+
+.thead_title {
+  width: 75%;
+
+  @media screen and (min-width: $width-sm) {
+    width: 50%;
+  }
+}
+
+.row_data {
+  font-size: 15px;
+}
+
+.row_data:nth-child(odd) {
+  background-color: $color-primary-light;
+}
+
+.column_title {
+  padding: 12px 0 12px 16px;
+  font-weight: 600;
+
+  a {
+    display: block;
+    width: 100%;
+  }
+}
+
+.column_department,
+.column_type {
+  text-align: center;
+}
+
+.thead_department,
+.column_department {
+  display: none;
+
+  @media screen and (min-width: $width-sm) {
+    display: table-cell;
+  }
+}

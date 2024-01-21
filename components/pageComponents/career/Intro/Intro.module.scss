@@ -1,0 +1,31 @@
+@import 'styles/variables.module';
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  margin: 18px 0 24px;
+
+  @media screen and (min-width: $width-xs) {
+    margin: 18px 10vw 48px;
+  }
+
+  @media screen and (min-width: $width-xl) {
+    margin: 32px 10vw 72px;
+  }
+}
+
+.with_highlight {
+  span {
+    color: #ef443b;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+}

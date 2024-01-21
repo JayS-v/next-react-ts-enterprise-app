@@ -1,0 +1,21 @@
+@import 'styles/variables.module';
+
+.select {
+  appearance: none;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 1em 2em;
+  flex-grow: 1;
+  min-width: 300px;
+
+  background-image: url(./arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: 1.5em;
+  cursor: pointer;
+  font-weight: 700;
+
+  @media screen and (min-width: $width-xs) {
+    min-width: 360px;
+  }
+}

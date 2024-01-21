@@ -1,0 +1,136 @@
+@import 'styles/variables.module';
+
+.section {
+  padding-bottom: 40px;
+  @media (max-width: $width-xs) {
+    padding-bottom: 20px;
+  }
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: $color-dark;
+  text-align: center;
+  margin-bottom: 80px;
+
+  @media (max-width: $width-md) {
+    padding-top: 40px;
+  }
+
+  @media (max-width: $width-xs) {
+    font-size: 1.7rem;
+    margin-bottom: 40px;
+  }
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 60px;
+  padding-left: 80px;
+  position: relative;
+
+  @media (max-width: $width-md) {
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: $width-xs) {
+    padding-left: 0;
+  }
+
+  &:before {
+    content: ' ';
+    border-left: 1px solid $color-grey;
+    position: absolute;
+    top: 50px;
+    bottom: 5px;
+    left: 22px;
+
+    @media (max-width: $width-xs) {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    &:before {
+      content: none;
+    }
+  }
+}
+
+.circleIcon {
+  color: $color-primary;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media (max-width: $width-xs) {
+    display: none;
+  }
+}
+
+.icon {
+  color: $color-primary;
+  margin-right: 20px;
+}
+
+.stepTitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: $color-muted;
+}
+
+.stepText {
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  @media (max-width: $width-xs) {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: $width-sm) {
+  .step {
+    margin-left: 50%;
+
+    &:before {
+      left: 0;
+    }
+
+    &:nth-child(odd) {
+      margin-left: 0;
+      margin-right: 50%;
+      padding-left: 0;
+      padding-right: 80px;
+      justify-content: flex-end;
+
+      &:before {
+        left: 100%;
+      }
+
+      .circleIcon {
+        left: auto;
+        right: -23px;
+      }
+
+      .icon {
+        order: 2;
+        margin-right: 0;
+        margin-left: 20px;
+      }
+
+      .description {
+        text-align: right;
+      }
+    }
+  }
+
+  .circleIcon {
+    left: -22px;
+  }
+
+  .description {
+    max-width: 320px;
+  }
+}

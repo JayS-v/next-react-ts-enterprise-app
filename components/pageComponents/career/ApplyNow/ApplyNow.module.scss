@@ -1,0 +1,58 @@
+@import 'styles/variables.module';
+
+.wrapper {
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.wrapper:nth-child(2) {
+  position: relative;
+  margin: 5em auto;
+}
+
+.apply_button {
+  display: block;
+  margin: 0 auto;
+  background-color: $color-primary;
+  color: #fff;
+  font-weight: 600;
+  border-radius: $border-radius-sm;
+  transition: $transition-base;
+  text-transform: capitalize;
+  padding: 0.5em 1em;
+
+  @media (min-width: $width-md) {
+    &:hover {
+      box-shadow: $box-shadow-button;
+    }
+  }
+}
+
+.dialog {
+  display: none;
+  padding: 8px;
+  background: #fff;
+  border-radius: 5px;
+  z-index: 999;
+  position: sticky;
+  width: fit-content;
+  box-shadow: $box-shadow-button;
+}
+
+.open {
+  display: block;
+}
+
+.icon_wrapper {
+  font-size: x-large;
+  display: block;
+  text-align: end;
+  margin: 12px 24px 0;
+  // half of the ContactForm padding-top
+  margin-bottom: -20px;
+}
+
+.icon {
+  cursor: pointer;
+}

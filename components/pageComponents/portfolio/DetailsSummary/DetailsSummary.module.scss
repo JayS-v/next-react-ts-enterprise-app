@@ -1,0 +1,78 @@
+@import 'styles/variables.module';
+
+.section {
+  padding: 40px 0 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $width-lg) {
+    flex-direction: column-reverse;
+  }
+}
+
+.left {
+  margin-right: 80px;
+
+  @media (max-width: $width-lg) {
+    margin-right: 0;
+  }
+}
+
+.right {
+  min-width: 440px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 20px;
+
+  @media (max-width: $width-lg) {
+    min-width: auto;
+    justify-content: flex-start;
+  }
+
+  @media (max-width: $width-xs) {
+    font-size: 0.9rem;
+  }
+
+  th {
+    vertical-align: top;
+    text-align: inherit;
+    color: $color-dark;
+    font-weight: 700;
+    padding: 0 40px 12px 0;
+
+    @media (max-width: $width-xs) {
+      padding-right: 20px;
+    }
+  }
+
+  td {
+    vertical-align: top;
+    padding: 0 0 12px;
+  }
+}
+
+.description {
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+  color: $color-dark;
+  font-weight: 600;
+
+  @media (max-width: $width-lg) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $width-xs) {
+    font-size: 1rem;
+  }
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $color-dark;
+  margin: 20px 0;
+}

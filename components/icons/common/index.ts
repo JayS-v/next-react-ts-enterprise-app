@@ -1,0 +1,9 @@
+export { default as CloseIcon } from './CloseIcon';
+export { default as MenuIcon } from './MenuIcon';
+export { default as CheckIcon } from './CheckIcon';
+export { default as FacebookIcon } from './FacebookIcon';
+export { default as LinkedinIcon } from './LinkedinIcon';
+export { default as InstagramIcon } from './InstagramIcon';
+export { default as CheckCircledIcon } from './CheckCircledIcon';
+export { default as TriangleDownIcon } from './TriangleDownIcon';
+export { default as CookieIcon } from './CookieIcon';

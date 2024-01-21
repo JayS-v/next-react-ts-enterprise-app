@@ -1,0 +1,6 @@
+README.md
+.dockerignore
+.idea
+.eslintignore
+.eslintrc.json
+sample.env

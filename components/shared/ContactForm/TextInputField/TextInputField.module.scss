@@ -1,0 +1,56 @@
+@import 'styles/variables.module';
+
+.formGroup {
+  margin-bottom: 20px;
+
+  label {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  &.invalid {
+    .input {
+      border-color: $color-danger;
+
+      &:focus {
+        box-shadow: 0 0 0 3px rgb($color-danger, 25%);
+      }
+    }
+  }
+}
+
+.input {
+  display: block;
+  margin: 6px 0;
+  padding: 9px 12px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  border: 1px solid $color-muted;
+  border-radius: $border-radius-sm;
+  transition: $transition-base;
+
+  &:hover {
+    border-color: $color-primary;
+  }
+
+  &:focus {
+    border-color: $color-primary;
+    box-shadow: 0 0 0 3px rgb($color-primary, 25%);
+  }
+
+  &::placeholder {
+    color: $color-muted;
+    font-size: 0.9rem;
+  }
+}
+
+.errorMessage {
+  font-size: 0.8rem;
+  color: $color-danger;
+}
+
+.file {
+  font-size: small;
+  max-width: 220px;
+}

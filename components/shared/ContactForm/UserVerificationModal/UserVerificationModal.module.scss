@@ -1,0 +1,64 @@
+@import 'styles/variables.module';
+
+.overlay {
+  background-color: rgba(#000, 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.wrapper {
+  width: 340px;
+  min-height: 260px;
+  padding: 10px 20px 40px;
+  background-color: #fff;
+  border-radius: $border-radius-sm;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    margin-bottom: 20px;
+    animation: fade-in-out 0.5s ease-in-out forwards;
+  }
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.widget {
+  margin-bottom: 20px;
+}
+
+.resetButton {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 20px;
+  border-radius: $border-radius-sm;
+  background-color: #dd751d;
+  color: #fff;
+  letter-spacing: 1.2px;
+}
+
+.closeButton {
+  margin-bottom: 10px;
+  margin-right: -10px;
+  align-self: flex-end;
+  width: 30px;
+  height: 30px;
+  font-size: 26px;
+  opacity: 30%;
+}
